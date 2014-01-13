@@ -1,0 +1,9 @@
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.Testes.dll
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.Testes.pdb
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\nunit.framework.dll
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\nunit.framework.xml
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\obj\Debug\Sigma.Arcgis.Core.Testes.dll
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\obj\Debug\Sigma.Arcgis.Core.Testes.pdb
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.dll
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.pdb
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\obj\Debug\Sigma.Arcgis.Core.Testes.csprojResolveAssemblyReference.cache

@@ -1,0 +1,4 @@
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core\bin\Debug\Sigma.Arcgis.Core.dll
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core\bin\Debug\Sigma.Arcgis.Core.pdb
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core\obj\Debug\Sigma.Arcgis.Core.dll
+C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core\obj\Debug\Sigma.Arcgis.Core.pdb
