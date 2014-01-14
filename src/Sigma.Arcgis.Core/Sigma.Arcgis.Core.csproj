@@ -76,8 +76,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Geometria\AzimuteDistancia.cs" />
     <Compile Include="Geometria\Calculadora.cs" />
     <Compile Include="Geometria\CalculoAzimuteDistancia.cs" />
+    <Compile Include="Geometria\GeradorMemorialDescritivo.cs" />
+    <Compile Include="Geometria\IAzimuteDistancia.cs" />
+    <Compile Include="Geometria\IMemorialDescritivo.cs" />
+    <Compile Include="Geometria\MemorialDescritivo.cs" />
+    <Compile Include="Matematica\Conversoes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

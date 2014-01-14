@@ -6,10 +6,11 @@ using ESRI.ArcGIS.Framework;
 using ESRI.ArcGIS.Geometry;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.ArcMap;
+using Sigma.Arcgis.Core.Matematica;
 
 namespace Sigma.Arcgis.Core.Geometria
 {
-    public class CalculoAzimuteDistancia
+    public class CalculoAzimuteDistancia : Conversoes
     {
         public double CalculaDistanciaEntreDoisPontos(IPoint de, IPoint para)
         {            
@@ -23,14 +24,12 @@ namespace Sigma.Arcgis.Core.Geometria
 
         public double CalculaAzimute(IPoint de, IPoint para)
         {
+            
             IVector3D vector = new Vector3DClass();
             vector.ConstructDifference(para, de);
             return CalculaGraus(vector.Azimuth);
         }
 
-        public double CalculaGraus(double rad)
-        {
-            return rad * (180 / Math.PI);
-        }
+
     }
 }
