@@ -8,10 +8,10 @@ namespace Sigma.Arcgis.Core.Geometria
 {
     public class AzimuteDistancia : IAzimuteDistancia
     {
-        IPoint DoPonto; 
-        IPoint AoPonto; 
-        double Azimute;
-        double Distancia;
+        public IPoint DoPonto { get; set; }
+        public IPoint AoPonto { get; set; }
+        public double Azimute { get; set; }
+        public double Distancia { get; set; }
 
         public AzimuteDistancia()
         {

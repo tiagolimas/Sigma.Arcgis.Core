@@ -7,6 +7,6 @@ namespace Sigma.Arcgis.Core.Geometria
 {
     public interface IMemorialDescritivo
     {
-        //public List<IAzimuteDistancia> AzimuteDistancias;
+        List<IAzimuteDistancia> AzimuteDistancias {get;set;}
     }
 }

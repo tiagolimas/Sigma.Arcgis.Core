@@ -50,6 +50,10 @@
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
     <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>False</EmbedInteropTypes>
@@ -73,6 +77,8 @@
   <ItemGroup>
     <Compile Include="Geometria\CalculadoraTeste.cs" />
     <Compile Include="Geometria\CalculoAzimuteDistancia.cs" />
+    <Compile Include="Geometria\FeatureMock.cs" />
+    <Compile Include="Geometria\GeradorMemorialDescritivo.cs" />
     <Compile Include="InicializadorArcObjects.cs" />
     <Compile Include="TesteArcObjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

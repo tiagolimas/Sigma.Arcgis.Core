@@ -8,11 +8,9 @@ namespace Sigma.Arcgis.Core.Geometria
 {
     public interface IAzimuteDistancia
     {
-        //IPoint DoPonto; // de
-        //IPoint AoPonto; // para
-
-        //double Azimute;
-        //double Distancia;
-
+        IPoint DoPonto {get; set;}
+        IPoint AoPonto { get; set; }
+        double Azimute { get; set; }
+        double Distancia { get; set; }
     }
 }

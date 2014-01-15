@@ -18,13 +18,11 @@ namespace Sigma.Arcgis.Core.Geometria
             col.AddPoint(de, Type.Missing, Type.Missing);
             col.AddPoint(para, Type.Missing, Type.Missing);
             IPolyline poly = (IPolyline)col;
-            
             return poly.Length;
         }
 
         public double CalculaAzimute(IPoint de, IPoint para)
         {
-            
             IVector3D vector = new Vector3DClass();
             vector.ConstructDifference(para, de);
             return CalculaGraus(vector.Azimuth);

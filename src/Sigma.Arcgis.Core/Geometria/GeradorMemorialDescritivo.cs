@@ -23,7 +23,8 @@ namespace Sigma.Arcgis.Core.Geometria
 
             CalculoAzimuteDistancia azimuteDistancia = new CalculoAzimuteDistancia();
 
-            for(int i=0; i < geometria.PointCount; i++ )
+            if (geometria.get_Point(geometria.PointCount - 1).X == 0 && geometria.get_Point(geometria.PointCount - 1).Y == 0)
+            for(int i=0; i < geometria.PointCount - 1; i++ )
             {
                 var doPonto = geometria.get_Point(i);
                 var aoPonto = geometria.get_Point(i+1);
@@ -32,7 +33,7 @@ namespace Sigma.Arcgis.Core.Geometria
                 var ListaAzimuteDistancia = new AzimuteDistancia(_az, d, doPonto, aoPonto);
                 lista.Add(ListaAzimuteDistancia);
             }
-        
+            
             return new MemorialDescritivo(lista);
         }
 
@@ -48,17 +49,15 @@ namespace Sigma.Arcgis.Core.Geometria
                 dictMemoriais.Add(id, memorial);
                 feature = cursor.NextFeature();
             }
-
+            
             return dictMemoriais;
         }
 
-
         public Dictionary<string, IMemorialDescritivo> GerarMemoriais(IFeatureClass klass)
         {
-
             var cursor = klass.Search(null, false);
+            
             return this.GerarMemoriais(cursor);
         }
-        
     }
 }

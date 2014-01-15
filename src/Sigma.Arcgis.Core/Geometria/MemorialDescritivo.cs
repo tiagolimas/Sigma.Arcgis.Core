@@ -7,7 +7,12 @@ namespace Sigma.Arcgis.Core.Geometria
 {
     public class MemorialDescritivo : IMemorialDescritivo
     {
-        public List<IAzimuteDistancia> AzimuteDistancias;
+        public List<IAzimuteDistancia> AzimuteDistancias { get; set; }
+
+        public MemorialDescritivo()
+        {
+
+        }
 
         public MemorialDescritivo(List<IAzimuteDistancia> _azimuteDistancias)
         {
