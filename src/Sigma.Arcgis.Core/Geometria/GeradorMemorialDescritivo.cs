@@ -23,17 +23,19 @@ namespace Sigma.Arcgis.Core.Geometria
 
             CalculoAzimuteDistancia azimuteDistancia = new CalculoAzimuteDistancia();
 
-            if (geometria.get_Point(geometria.PointCount - 1).X == 0 && geometria.get_Point(geometria.PointCount - 1).Y == 0)
-            for(int i=0; i < geometria.PointCount - 1; i++ )
+            if (geometria.get_Point(geometria.PointCount - 1).X == geometria.get_Point(0).X &&
+                geometria.get_Point(geometria.PointCount - 1).Y == geometria.get_Point(0).Y)
             {
-                var doPonto = geometria.get_Point(i);
-                var aoPonto = geometria.get_Point(i+1);
-                var _az = azimuteDistancia.CalculaAzimute(doPonto, aoPonto);
-                var d = azimuteDistancia.CalculaDistanciaEntreDoisPontos(doPonto, aoPonto);
-                var ListaAzimuteDistancia = new AzimuteDistancia(_az, d, doPonto, aoPonto);
-                lista.Add(ListaAzimuteDistancia);
+                for (int i = 0; i < geometria.PointCount - 1; i++)
+                {
+                    var doPonto = geometria.get_Point(i);
+                    var aoPonto = geometria.get_Point(i + 1);
+                    var _az = azimuteDistancia.CalculaAzimute(doPonto, aoPonto);
+                    var d = azimuteDistancia.CalculaDistanciaEntreDoisPontos(doPonto, aoPonto);
+                    var ListaAzimuteDistancia = new AzimuteDistancia(_az, d, doPonto, aoPonto);
+                    lista.Add(ListaAzimuteDistancia);
+                }
             }
-            
             return new MemorialDescritivo(lista);
         }
 
