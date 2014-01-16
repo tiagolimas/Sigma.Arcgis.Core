@@ -1,52 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Sigma.Arcgis.Core.Testes.nunit" total="14" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-01-15" time="17:07:05">
+<test-results name="C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Sigma.Arcgis.Core.Testes.nunit" total="15" errors="1" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2014-01-16" time="18:03:25">
   <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.5420" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.3\bin" machine-name="WILLPC" user="WiLL" user-domain="WILLPC" />
   <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
-  <test-suite type="Project" name="C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Sigma.Arcgis.Core.Testes.nunit" executed="True" result="Success" success="True" time="0.488" asserts="0">
+  <test-suite type="Project" name="C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Sigma.Arcgis.Core.Testes.nunit" executed="True" result="Failure" success="False" time="206.633" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.Testes.dll" executed="True" result="Success" success="True" time="0.481" asserts="0">
+      <test-suite type="Assembly" name="C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.Testes.dll" executed="True" result="Failure" success="False" time="206.626" asserts="0">
         <results>
-          <test-suite type="Namespace" name="Sigma" executed="True" result="Success" success="True" time="0.481" asserts="0">
+          <test-suite type="Namespace" name="Sigma" executed="True" result="Failure" success="False" time="206.626" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Arcgis" executed="True" result="Success" success="True" time="0.481" asserts="0">
+              <test-suite type="Namespace" name="Arcgis" executed="True" result="Failure" success="False" time="206.626" asserts="0">
                 <results>
-                  <test-suite type="Namespace" name="Core" executed="True" result="Success" success="True" time="0.481" asserts="0">
+                  <test-suite type="Namespace" name="Core" executed="True" result="Failure" success="False" time="206.626" asserts="0">
                     <results>
-                      <test-suite type="SetUpFixture" name="Testes" executed="True" result="Success" success="True" time="0.480" asserts="0">
+                      <test-suite type="SetUpFixture" name="Testes" executed="True" result="Failure" success="False" time="206.625" asserts="0">
                         <results>
-                          <test-suite type="Namespace" name="Geometria" executed="True" result="Success" success="True" time="0.454" asserts="0">
+                          <test-suite type="Namespace" name="Geometria" executed="True" result="Failure" success="False" time="204.444" asserts="0">
                             <results>
-                              <test-suite type="TestFixture" name="CalculadoraTeste" executed="True" result="Success" success="True" time="0.094" asserts="0">
+                              <test-suite type="TestFixture" name="CalculadoraTeste" executed="True" result="Success" success="True" time="0.161" asserts="0">
                                 <results>
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculadoraTeste.TestSoma1" executed="True" result="Success" success="True" time="0.089" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculadoraTeste.TestSoma1" executed="True" result="Success" success="True" time="0.155" asserts="1" />
                                 </results>
                               </test-suite>
-                              <test-suite type="TestFixture" name="CalculoAzimuteDistancia" executed="True" result="Success" success="True" time="0.072" asserts="0">
+                              <test-suite type="TestFixture" name="CalculoAzimuteDistancia" executed="True" result="Success" success="True" time="0.079" asserts="0">
                                 <results>
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaAzimute0" executed="True" result="Success" success="True" time="0.011" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaAzimute0" executed="True" result="Success" success="True" time="0.012" asserts="1" />
                                   <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaAzimute180" executed="True" result="Success" success="True" time="0.007" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaAzimute270" executed="True" result="Success" success="True" time="0.006" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaAzimute90" executed="True" result="Success" success="True" time="0.006" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaDistancia" executed="True" result="Success" success="True" time="0.029" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaAzimute270" executed="True" result="Success" success="True" time="0.007" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaAzimute90" executed="True" result="Success" success="True" time="0.005" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia.TesteCalculaDistancia" executed="True" result="Success" success="True" time="0.031" asserts="1" />
                                 </results>
                               </test-suite>
-                              <test-suite type="TestFixture" name="GeradorMemorialDescritivo" executed="True" result="Success" success="True" time="0.279" asserts="0">
+                              <test-suite type="TestFixture" name="GeradorMemorialDescritivo" executed="True" result="Failure" success="False" time="204.113" asserts="0">
                                 <results>
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeature" executed="True" result="Success" success="True" time="0.052" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute180" executed="True" result="Success" success="True" time="0.034" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute270" executed="True" result="Success" success="True" time="0.031" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute360" executed="True" result="Success" success="True" time="0.032" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute90" executed="True" result="Success" success="True" time="0.031" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeature" executed="True" result="Success" success="True" time="0.050" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute180" executed="True" result="Success" success="True" time="0.036" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute270" executed="True" result="Success" success="True" time="0.035" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute360" executed="True" result="Success" success="True" time="0.035" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureAzimute90" executed="True" result="Success" success="True" time="0.035" asserts="1" />
                                   <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureDistancia360" executed="True" result="Success" success="True" time="0.033" asserts="1" />
-                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureDistancia90" executed="True" result="Success" success="True" time="0.040" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGeraMemorialFeatureDistancia90" executed="True" result="Success" success="True" time="0.033" asserts="1" />
+                                  <test-case name="Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGerarMemoriaisFeatureClass" executed="True" result="Error" success="False" time="203.803" asserts="0">
+                                    <failure>
+                                      <message><![CDATA[System.ArgumentOutOfRangeException : O índice estava fora do intervalo. Ele deve ser não-negativo e menor que o tamanho da coleção.
+Nome do parâmetro: index]]></message>
+                                      <stack-trace><![CDATA[em System.ThrowHelper.ThrowArgumentOutOfRangeException(ExceptionArgument argument, ExceptionResource resource)
+em System.ThrowHelper.ThrowArgumentOutOfRangeException()
+em System.Collections.Generic.List`1.get_Item(Int32 index)
+em Sigma.Arcgis.Core.Testes.Geometria.CursorMock.NextFeature() na C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Geometria\CursorMock.cs:linha 53
+em Sigma.Arcgis.Core.Geometria.GeradorMemorialDescritivo.GerarMemoriais(IFeatureCursor cursor) na C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core\Geometria\GeradorMemorialDescritivo.cs:linha 53
+em Sigma.Arcgis.Core.Geometria.GeradorMemorialDescritivo.GerarMemoriais(IFeatureClass klass) na C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core\Geometria\GeradorMemorialDescritivo.cs:linha 63
+em Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo.TesteGerarMemoriaisFeatureClass() na C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Geometria\GeradorMemorialDescritivo.cs:linha 122
+]]></stack-trace>
+                                    </failure>
+                                  </test-case>
                                 </results>
                               </test-suite>
                             </results>
                           </test-suite>
-                          <test-suite type="TestFixture" name="TesteArcObjects" executed="True" result="Success" success="True" time="0.003" asserts="0">
+                          <test-suite type="TestFixture" name="TesteArcObjects" executed="True" result="Success" success="True" time="2.131" asserts="0">
                             <results>
-                              <test-case name="Sigma.Arcgis.Core.Testes.TesteArcObjects.TesteInicialGarantiaDeFuncionamentoArcObjects" executed="True" result="Success" success="True" time="0.002" asserts="2" />
+                              <test-case name="Sigma.Arcgis.Core.Testes.TesteArcObjects.TesteInicialGarantiaDeFuncionamentoArcObjects" executed="True" result="Success" success="True" time="2.114" asserts="2" />
                             </results>
                           </test-suite>
                         </results>

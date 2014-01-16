@@ -41,7 +41,12 @@ namespace Sigma.Arcgis.Core.Testes.Geometria
 
         public int OID
         {
-            get { throw new NotImplementedException(); }
+            get { 
+                    Random random = new Random();
+                    int numero = random.Next(0, 10000);
+
+                    return numero;
+                }
         }
 
         public ESRI.ArcGIS.Geometry.IGeometry Shape

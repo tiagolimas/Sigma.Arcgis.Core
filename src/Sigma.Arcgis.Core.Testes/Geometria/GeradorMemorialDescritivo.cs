@@ -111,6 +111,19 @@ namespace Sigma.Arcgis.Core.Testes.Geometria
             Console.WriteLine("Distancia: " + memorial.AzimuteDistancias[1].Distancia);
             Assert.AreEqual(1, memorial.AzimuteDistancias[1].Distancia);
         }
+
+        [Test]
+        public void TesteGerarMemoriaisFeatureClass()
+        {
+            Sigma.Arcgis.Core.Geometria.GeradorMemorialDescritivo ger = new Sigma.Arcgis.Core.Geometria.GeradorMemorialDescritivo();
+            IFeatureClass feature = new FeatureClassMock();
+
+            IDictionary<string, IMemorialDescritivo> memorial;
+            memorial = ger.GerarMemoriais(feature);
+
+            Console.WriteLine("Dictionary: " + memorial.Values.ToString());
+            Assert.AreEqual(1, memorial.Count);
+        }
     }
 }
 

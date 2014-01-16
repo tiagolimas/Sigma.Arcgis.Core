@@ -43,12 +43,13 @@ namespace Sigma.Arcgis.Core.Geometria
         {
             var feature = cursor.NextFeature();
             var dictMemoriais = new Dictionary<string, IMemorialDescritivo>();
-            
+
             while (feature != null)
             {
                 var id = feature.OID.ToString();
                 var memorial = this.GerarMemorial(feature);
                 dictMemoriais.Add(id, memorial);
+                
                 feature = cursor.NextFeature();
             }
             

@@ -77,6 +77,8 @@
   <ItemGroup>
     <Compile Include="Geometria\CalculadoraTeste.cs" />
     <Compile Include="Geometria\CalculoAzimuteDistancia.cs" />
+    <Compile Include="Geometria\CursorMock.cs" />
+    <Compile Include="Geometria\FeatureClassMock.cs" />
     <Compile Include="Geometria\FeatureMock.cs" />
     <Compile Include="Geometria\GeradorMemorialDescritivo.cs" />
     <Compile Include="InicializadorArcObjects.cs" />
