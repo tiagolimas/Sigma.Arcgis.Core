@@ -84,6 +84,10 @@
     <Compile Include="Geometria\IMemorialDescritivo.cs" />
     <Compile Include="Geometria\MemorialDescritivo.cs" />
     <Compile Include="Matematica\Conversoes.cs" />
+    <Compile Include="Memorial\EscritorMemorial.cs" />
+    <Compile Include="Memorial\IEscritorMemorial.cs" />
+    <Compile Include="Memorial\IParserAzimuteDistancia.cs" />
+    <Compile Include="Memorial\ParserAzimuteDsitancia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

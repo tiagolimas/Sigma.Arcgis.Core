@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
   <TopNode>[0-1000]C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Sigma.Arcgis.Core.Testes.nunit</TopNode>
-  <SelectedNode>[0-1000]C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Sigma.Arcgis.Core.Testes.nunit</SelectedNode>
+  <SelectedNode>[0-1029]Sigma.Arcgis.Core.Testes.Memorial</SelectedNode>
   <ExcludeCategories>false</ExcludeCategories>
   <Nodes>
     <Node UniqueName="[0-1000]C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\Sigma.Arcgis.Core.Testes.nunit" Expanded="true" />
-    <Node UniqueName="[0-1020]C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.Testes.dll" Expanded="true" />
-    <Node UniqueName="[0-1021]Sigma" Expanded="true" />
-    <Node UniqueName="[0-1022]Sigma.Arcgis" Expanded="true" />
-    <Node UniqueName="[0-1023]Sigma.Arcgis.Core" Expanded="true" />
-    <Node UniqueName="[0-1011]Sigma.Arcgis.Core.Testes.InicializadorArcObjects" Expanded="true" />
-    <Node UniqueName="[0-1025]Sigma.Arcgis.Core.Testes.Geometria" Expanded="true" />
+    <Node UniqueName="[0-1023]C:\SIGMA\ESTUDOS\Exemplos\Sigma.Arcgis.Core\Sigma.Arcgis.Core.Testes\bin\Debug\Sigma.Arcgis.Core.Testes.dll" Expanded="true" />
+    <Node UniqueName="[0-1024]Sigma" Expanded="true" />
+    <Node UniqueName="[0-1025]Sigma.Arcgis" Expanded="true" />
+    <Node UniqueName="[0-1026]Sigma.Arcgis.Core" Expanded="true" />
+    <Node UniqueName="[0-1020]Sigma.Arcgis.Core.Testes.InicializadorArcObjects" Expanded="true" />
+    <Node UniqueName="[0-1028]Sigma.Arcgis.Core.Testes.Geometria" Expanded="true" />
     <Node UniqueName="[0-1009]Sigma.Arcgis.Core.Testes.Geometria.CalculadoraTeste" Expanded="true" />
     <Node UniqueName="[0-1003]Sigma.Arcgis.Core.Testes.Geometria.CalculoAzimuteDistancia" Expanded="true" />
-    <Node UniqueName="[0-1012]Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo" Expanded="true" />
+    <Node UniqueName="[0-1011]Sigma.Arcgis.Core.Testes.Geometria.GeradorMemorialDescritivo" Expanded="true" />
+    <Node UniqueName="[0-1029]Sigma.Arcgis.Core.Testes.Memorial" Expanded="true" />
+    <Node UniqueName="[0-1021]Sigma.Arcgis.Core.Testes.Memorial.EscritorMemorial" Expanded="true" />
     <Node UniqueName="[0-1001]Sigma.Arcgis.Core.Testes.TesteArcObjects" Expanded="true" />
   </Nodes>
 </VisualState>

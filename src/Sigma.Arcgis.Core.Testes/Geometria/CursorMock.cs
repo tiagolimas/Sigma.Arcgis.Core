@@ -52,7 +52,7 @@ namespace Sigma.Arcgis.Core.Testes.Geometria
             {
                 mockFeature = _mockFeatures[_featureIndex];
             }
-            catch (IndexOutOfRangeException indexError)
+            catch (ArgumentOutOfRangeException indexError)
             {
                 return null;
             }

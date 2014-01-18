@@ -50,7 +50,10 @@ namespace Sigma.Arcgis.Core.Geometria
                 var memorial = this.GerarMemorial(feature);
                 dictMemoriais.Add(id, memorial);
                 
-                feature = cursor.NextFeature();
+                if (cursor.NextFeature() != null )
+                {
+                    feature = cursor.NextFeature();
+                }
             }
             
             return dictMemoriais;
