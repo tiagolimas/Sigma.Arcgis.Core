@@ -77,12 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Geometria\AzimuteDistancia.cs" />
-    <Compile Include="Geometria\Calculadora.cs" />
-    <Compile Include="Geometria\CalculoAzimuteDistancia.cs" />
-    <Compile Include="Geometria\GeradorMemorialDescritivo.cs" />
-    <Compile Include="Geometria\IAzimuteDistancia.cs" />
-    <Compile Include="Geometria\IMemorialDescritivo.cs" />
-    <Compile Include="Geometria\MemorialDescritivo.cs" />
+    <Compile Include="Memorial\Calculadora.cs" />
+    <Compile Include="Memorial\CalculoAzimuteDistancia.cs" />
+    <Compile Include="Memorial\GeradorMemorialDescritivo.cs" />
+    <Compile Include="Memorial\IAzimuteDistancia.cs" />
+    <Compile Include="Memorial\IMemorialDescritivo.cs" />
+    <Compile Include="Memorial\MemorialDescritivo.cs" />
     <Compile Include="Matematica\Conversoes.cs" />
     <Compile Include="Memorial\EscritorMemorial.cs" />
     <Compile Include="Memorial\IEscritorMemorial.cs" />

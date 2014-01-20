@@ -24,7 +24,6 @@ namespace Sigma.Arcgis.Core.Geometria
             Distancia = Dist;
             DoPonto = Do;
             AoPonto = Ao;
-        }
-            
+        }  
     }
 }

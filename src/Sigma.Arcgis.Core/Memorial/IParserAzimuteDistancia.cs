@@ -16,5 +16,6 @@ namespace Sigma.Arcgis.Core.Memorial
         string Escrever(IMemorialDescritivo memorial);
 
        // void Escrever(List<IAzimuteDistancia> list);
+
     }
 }

@@ -14,5 +14,7 @@ namespace Sigma.Arcgis.Core.Memorial
         //void Escrever(List<IMemorialDescritivo> memorialDescritivo);
 
         void Escrever(IDictionary<string, IMemorialDescritivo> memoriaisDescritivos);
+
+        bool Configurar(string caminho);
     }
 }

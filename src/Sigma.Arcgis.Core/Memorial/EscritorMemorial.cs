@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Sigma.Arcgis.Core.Geometria;
 using System.IO;
+using System.Text.RegularExpressions;
 
 namespace Sigma.Arcgis.Core.Memorial
 {
@@ -12,11 +13,6 @@ namespace Sigma.Arcgis.Core.Memorial
         private IParserAzimuteDistancia _parser;
         private bool _configurado;
         private string _caminho;
-
-        public EscritorMemorial()
-        {
-
-        }
 
         //Construtor
         public EscritorMemorial(IParserAzimuteDistancia parser)
@@ -35,10 +31,8 @@ namespace Sigma.Arcgis.Core.Memorial
             }
             
             StreamWriter escritor = new StreamWriter(_caminho);
-            escritor.WriteLine(DateTime.Now.Date);
             escritor.WriteLine(_parser.Escrever(memorial));
             escritor.Close();
-            //Console.WriteLine("GRAVOU!!!");  
         }
         
         public void Escrever(IMemorialDescritivo memorialDescritivo)
@@ -57,7 +51,7 @@ namespace Sigma.Arcgis.Core.Memorial
         }
 
         //Valida path
-        private bool Configurar(string caminho)
+        public bool Configurar(string caminho)
         {
             var valido = true;
 
@@ -66,9 +60,20 @@ namespace Sigma.Arcgis.Core.Memorial
                 valido = false;
             }
 
+    
             if (File.Exists(caminho))
             {
                 valido = false;
+            }
+            
+            if (Path.HasExtension(caminho))
+            {
+                valido = true;
+            }
+
+            if (Path.IsPathRooted(caminho))
+            {
+                valido = true;
             }
 
             if (valido)
@@ -81,5 +86,3 @@ namespace Sigma.Arcgis.Core.Memorial
         }
     }
 }
-
-

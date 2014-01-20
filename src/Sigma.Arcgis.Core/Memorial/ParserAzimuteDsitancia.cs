@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Sigma.Arcgis.Core.Geometria;
+using ESRI.ArcGIS.Geometry;
 
 namespace Sigma.Arcgis.Core.Memorial
 {
@@ -22,7 +23,7 @@ namespace Sigma.Arcgis.Core.Memorial
                                  azimuteDistancia.AoPonto.X,
                                  azimuteDistancia.DoPonto.Y,
                                  azimuteDistancia.Azimute,
-                                 azimuteDistancia.Distancia);
+                                 azimuteDistancia.Distancia).Trim();
         }
 
         public string Escrever(IMemorialDescritivo memorial)
@@ -33,11 +34,27 @@ namespace Sigma.Arcgis.Core.Memorial
                 builder.AppendLine(this.Escrever(azDistancia));
             }
 
-            return builder.ToString();
+            return builder.ToString().Trim();
         }
 
         public IAzimuteDistancia Ler(string azimuteDistancia)
         {
+            if (!string.IsNullOrEmpty(azimuteDistancia))
+            {
+                IAzimuteDistancia azimutes = new AzimuteDistancia();
+                string[] memorialSeparado = azimuteDistancia.Split(';');
+                IPoint Do = new Point();
+                IPoint Ao = new Point();
+                Do.PutCoords(Convert.ToDouble(memorialSeparado[0]), Convert.ToDouble(memorialSeparado[1]));
+                Ao.PutCoords(Convert.ToDouble(memorialSeparado[2]), Convert.ToDouble(memorialSeparado[3]));
+                azimutes.DoPonto = Do;
+                azimutes.AoPonto = Ao;
+                azimutes.Azimute = Convert.ToDouble(memorialSeparado[4]);
+                azimutes.Distancia = Convert.ToDouble(memorialSeparado[5]);
+
+                return azimutes;
+            }
+
             return new AzimuteDistancia();
         }
 
