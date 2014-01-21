@@ -41,7 +41,6 @@ namespace Sigma.Arcgis.Core.Testes.Memorial
         [Test]
         public void TesteLeitura()
         {
-            Core.Geometria.GeradorMemorialDescritivo ger = new Core.Geometria.GeradorMemorialDescritivo();
             IFeature feature = new FeatureMock();
             IParserAzimuteDistancia parser = new ParserAzimuteDsitancia();
             var memorial = parser.Ler(new StreamReader(@"c:\2568.txt"));
@@ -57,5 +56,30 @@ namespace Sigma.Arcgis.Core.Testes.Memorial
             
             Assert.IsTrue(escritor.Configurar(@"C:\x.txt"));
         }
+
+        [Test]
+        public void TesteComparacao()
+        {
+            Core.Geometria.GeradorMemorialDescritivo ger = new Core.Geometria.GeradorMemorialDescritivo();
+            IFeature featureGrav = new FeatureMock();
+            IMemorialDescritivo memorialGrav = new MemorialDescritivo();
+            memorialGrav = ger.GerarMemorial(featureGrav);
+            IParserAzimuteDistancia parser = new ParserAzimuteDsitancia();
+            var lerMemorial = parser.Ler(new StreamReader(@"c:\2568.txt"));
+
+            var stringMemorialGrav = parser.Escrever(memorialGrav);
+            var stringLerMemorial = parser.Escrever(lerMemorial);
+            
+            bool comp = false;
+            if (string.Compare(stringMemorialGrav, stringLerMemorial) == 0)
+            {
+                comp = true;
+            }
+
+            Console.Write("Resultado da comparação: " + string.Compare(stringMemorialGrav, stringLerMemorial));
+            Assert.IsTrue(comp);
+        }
+
+
     }
 }

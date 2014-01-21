@@ -60,6 +60,11 @@ namespace Sigma.Arcgis.Core.Memorial
                 valido = false;
             }
 
+            Regex r = new Regex(@"^(?:[\w]\:|\\)(\\[a-z_\-\s0-9\.]+)+\.(txt|xls)$");
+            if (r.IsMatch(caminho))
+            {
+                valido = true;
+            }
     
             if (File.Exists(caminho))
             {
@@ -68,12 +73,12 @@ namespace Sigma.Arcgis.Core.Memorial
             
             if (Path.HasExtension(caminho))
             {
-                valido = true;
+                valido = false;
             }
 
             if (Path.IsPathRooted(caminho))
             {
-                valido = true;
+                valido = false;
             }
 
             if (valido)
