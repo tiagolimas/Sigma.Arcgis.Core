@@ -71,16 +71,6 @@ namespace Sigma.Arcgis.Core.Memorial
                 valido = false;
             }
             
-            if (Path.HasExtension(caminho))
-            {
-                valido = false;
-            }
-
-            if (Path.IsPathRooted(caminho))
-            {
-                valido = false;
-            }
-
             if (valido)
             {
                 _configurado = true;
