@@ -1,7 +1,0 @@
-﻿<NUnitProject>
-  <Settings activeconfig="Debug" processModel="Default" domainUsage="Default" />
-  <Config name="Debug" binpathtype="Auto">
-    <assembly path="bin\Debug\Sigma.Arcgis.Core.Testes.dll" />
-  </Config>
-  <Config name="Release" binpathtype="Auto" />
-</NUnitProject>
