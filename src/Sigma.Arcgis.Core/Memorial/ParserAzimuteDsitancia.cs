@@ -37,6 +37,7 @@ namespace Sigma.Arcgis.Core.Memorial
             return builder.ToString().Trim();
         }
 
+        //Recebe uma string de AzimuteDistancia e retorna Objeto AzimuteDistancia
         public IAzimuteDistancia Ler(string azimuteDistancia)
         {
             if (!string.IsNullOrEmpty(azimuteDistancia))
@@ -58,6 +59,7 @@ namespace Sigma.Arcgis.Core.Memorial
             return new AzimuteDistancia();
         }
 
+        //Recebe um reader e retorna um MemorialDescritivo
         public IMemorialDescritivo Ler(StreamReader reader)
         {
             List<IAzimuteDistancia> azimutes = new List<IAzimuteDistancia>();

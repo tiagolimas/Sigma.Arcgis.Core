@@ -24,6 +24,7 @@ namespace Sigma.Arcgis.Core.Memorial
 
             CalculoAzimuteDistancia azimuteDistancia = new CalculoAzimuteDistancia();
 
+            //Valida a Geometria
             if (geometria.get_Point(geometria.PointCount - 1).X == geometria.get_Point(0).X &&
                 geometria.get_Point(geometria.PointCount - 1).Y == geometria.get_Point(0).Y)
             {
@@ -48,12 +49,24 @@ namespace Sigma.Arcgis.Core.Memorial
             while (feature != null)
             {
                 var id = feature.OID.ToString();
+                Random random = new Random();
+                int numeroRandom = random.Next(0, 1000000);
+                var _nomeArquivo = string.Format("{0}_{1}", id, numeroRandom);
+
                 var memorial = this.GerarMemorial(feature);
-                dictMemoriais.Add(id, memorial);
-                
-                if (cursor.NextFeature() != null )
+
+                if (memorial.AzimuteDistancias.Count > 0)
+                {
+                    dictMemoriais.Add(_nomeArquivo, memorial);
+                }
+
+                if (cursor.NextFeature() != null)
                 {
                     feature = cursor.NextFeature();
+                }
+                else
+                {
+                    return dictMemoriais;
                 }
             }
             

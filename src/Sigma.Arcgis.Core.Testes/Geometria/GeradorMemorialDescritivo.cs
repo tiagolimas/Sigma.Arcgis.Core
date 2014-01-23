@@ -116,17 +116,18 @@ namespace Sigma.Arcgis.Core.Testes.Geometria
         [Test]
         public void TesteGerarMemoriaisFeatureClass()
         {
-            //Sigma.Arcgis.Core.Geometria.GeradorMemorialDescritivo ger = new Sigma.Arcgis.Core.Geometria.GeradorMemorialDescritivo();
-            //IFeatureClass featureClass = new FeatureClassMock();
+            Sigma.Arcgis.Core.Memorial.GeradorMemorialDescritivo ger = new Sigma.Arcgis.Core.Memorial.GeradorMemorialDescritivo();
+            IFeatureClass featureClass = new FeatureClassMock();
 
-            //IDictionary<string, IMemorialDescritivo> memoriaisDescritivos;
-            //memoriaisDescritivos = ger.GerarMemoriais(featureClass);
+            IDictionary<string, IMemorialDescritivo> memoriaisDescritivos;
+            memoriaisDescritivos = ger.GerarMemoriais(featureClass);
 
-            //Core.Memorial.EscritorMemorial escritor = new Core.Memorial.EscritorMemorial();
-            //escritor.Equals(memoriaisDescritivos);
+            IParserAzimuteDistancia parser = new ParserAzimuteDsitancia();
+            Core.Memorial.EscritorMemorial escritor = new Core.Memorial.EscritorMemorial(parser);
+            escritor.Equals(memoriaisDescritivos);
 
-            //Console.WriteLine("Dictionary: " + memoriaisDescritivos.Values.ToString());
-            //Assert.AreEqual(2, memoriaisDescritivos.Count);
+            Console.WriteLine("Dictionary: " + memoriaisDescritivos.Values.ToString());
+            Assert.AreEqual(2, memoriaisDescritivos.Count);
         }
     }
 }
