@@ -49,15 +49,11 @@ namespace Sigma.Arcgis.Core.Memorial
             while (feature != null)
             {
                 var id = feature.OID.ToString();
-                Random random = new Random();
-                int numeroRandom = random.Next(0, 1000000);
-                var _nomeArquivo = string.Format("{0}_{1}", id, numeroRandom);
-
                 var memorial = this.GerarMemorial(feature);
 
                 if (memorial.AzimuteDistancias.Count > 0)
                 {
-                    dictMemoriais.Add(_nomeArquivo, memorial);
+                    dictMemoriais.Add(id, memorial);
                 }
 
                 if (cursor.NextFeature() != null)

@@ -35,7 +35,6 @@ namespace Sigma.Arcgis.Core.Memorial
             StreamWriter escritor = new StreamWriter(_caminhoCompleto);
             escritor.WriteLine(_parser.Escrever(memorial));
             escritor.Close();
-            //_caminho = string.Empty;
         }
         
         public void Escrever(IMemorialDescritivo memorialDescritivo)
@@ -48,8 +47,9 @@ namespace Sigma.Arcgis.Core.Memorial
         {
             foreach (KeyValuePair<string, IMemorialDescritivo> kvp in memoriaisDescritivos)
             {
-                _caminhoCompleto = string.Format(@"{0}{1}.txt ", _caminho, kvp.Key);
-                _configurado = this.Configurar(_caminhoCompleto);
+               _caminhoCompleto = Path.Combine(_caminho, kvp.Key);
+               _caminhoCompleto = string.Format(@"{0}.txt ", _caminhoCompleto);
+               _configurado = this.Configurar(_caminhoCompleto);
                 
                 this.EscreverImpl(kvp.Value);   
             }
@@ -65,28 +65,11 @@ namespace Sigma.Arcgis.Core.Memorial
                 valido = false;
             }
 
-            if (Directory.Exists(caminho))
-            {
-                valido = false;
-            }
-    
-            if (File.Exists(caminho))
-            {
-                Random random = new Random();
-                int numeroRandom = random.Next(0, 1000000);
-                _caminhoCompleto = string.Format(@"{0}{1}.txt ", _caminho, numeroRandom);
-                return (Configurar(_caminhoCompleto));
-            }
-
             if (Path.HasExtension(caminho))
             {
                 valido = true;
 
                 if (Path.GetExtension(caminho).Trim() != ".txt")
-                {
-                    valido = false;
-                }
-                if (File.Exists(caminho))
                 {
                     valido = false;
                 }

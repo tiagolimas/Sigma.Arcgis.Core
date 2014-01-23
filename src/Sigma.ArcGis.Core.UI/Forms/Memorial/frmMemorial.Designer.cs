@@ -52,7 +52,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 62);
+            this.label2.Location = new System.Drawing.Point(6, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 18;
@@ -138,7 +138,7 @@
             this.Controls.Add(this.btnAbrirPasta);
             this.Controls.Add(this.btnAbrirFeature);
             this.Name = "frmMemorial";
-            this.Text = "frmMemorial";
+            this.Text = "Memorial Descritivo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
