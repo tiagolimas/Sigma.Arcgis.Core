@@ -33,7 +33,7 @@ namespace Sigma.Arcgis.Core.UI.Forms.Memorial
             FClasse = klass;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -44,21 +44,30 @@ namespace Sigma.Arcgis.Core.UI.Forms.Memorial
             textDestino.Text = folderDialog.SelectedPath.ToString().Trim();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnOk_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(textEntrada.Text) && !string.IsNullOrEmpty(textDestino.Text))
+            try
             {
-                Sigma.Arcgis.Core.Memorial.GeradorMemorialDescritivo ger = new Core.Memorial.GeradorMemorialDescritivo();
-                IParserAzimuteDistancia parser = new ParserAzimuteDsitancia();
+                if (!string.IsNullOrEmpty(textEntrada.Text) && !string.IsNullOrEmpty(textDestino.Text))
+                {
+                    Sigma.Arcgis.Core.Memorial.GeradorMemorialDescritivo ger = new Core.Memorial.GeradorMemorialDescritivo();
+                    IParserAzimuteDistancia parser = new ParserAzimuteDsitancia();
 
-                IDictionary<string, IMemorialDescritivo> memoriaisDescritivos;
-                memoriaisDescritivos = ger.GerarMemoriais(FClasse);
+                    IDictionary<string, IMemorialDescritivo> memoriaisDescritivos;
+                    memoriaisDescritivos = ger.GerarMemoriais(FClasse);
 
-                Core.Memorial.EscritorMemorial escritor = new Core.Memorial.EscritorMemorial(parser);
-                escritor.Configurar(textDestino.Text.Trim());
-                escritor.Escrever(memoriaisDescritivos);
-                this.Close();
+                    Core.Memorial.EscritorMemorial escritor = new Core.Memorial.EscritorMemorial(parser);
+                    escritor.Configurar(textDestino.Text.Trim());
+                    escritor.Escrever(memoriaisDescritivos);
+                    MessageBox.Show("Memorial Descritivo gerado com sucesso!");
+                }
             }
+            catch(Exception ex)
+            {
+                var erro = string.Format("Não foi possível gerar o memorial: {0}", ex);
+                MessageBox.Show(erro);
+            }
+
         }
     }
 }

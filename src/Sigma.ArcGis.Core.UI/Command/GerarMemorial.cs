@@ -76,7 +76,7 @@ namespace Sigma.Arcgis.Core.UI.Command
         {
             base.m_category = "Memorial";
             base.m_caption = "Gerar Memorial";
-            base.m_message = "Este comando permite ao usuário gerar memorial descritivo em formato texto.";
+            base.m_message = "Gerar memorial descritivo em formato texto.";
             base.m_toolTip = "Este comando permite ao usuário gerar memorial descritivo em formato texto.";
             base.m_name = "Memorial_GerarMemorial";
 

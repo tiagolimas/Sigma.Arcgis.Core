@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMemorial));
             this.lblFeature = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textDestino = new System.Windows.Forms.TextBox();
             this.textEntrada = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnOk = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAbrirPasta = new System.Windows.Forms.Button();
             this.btnAbrirFeature = new System.Windows.Forms.Button();
             this.dialogDestino = new System.Windows.Forms.SaveFileDialog();
@@ -52,7 +53,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 61);
+            this.label2.Location = new System.Drawing.Point(6, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 18;
@@ -61,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 9);
+            this.label1.Location = new System.Drawing.Point(6, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 17;
@@ -83,25 +84,25 @@
             this.textEntrada.Size = new System.Drawing.Size(335, 20);
             this.textEntrada.TabIndex = 15;
             // 
-            // button4
+            // btnOk
             // 
-            this.button4.Location = new System.Drawing.Point(76, 149);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(61, 23);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Ok";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnOk.Location = new System.Drawing.Point(76, 149);
+            this.btnOk.Name = "btnOk";
+            this.btnOk.Size = new System.Drawing.Size(61, 23);
+            this.btnOk.TabIndex = 14;
+            this.btnOk.Text = "Ok";
+            this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // button3
+            // btnCancelar
             // 
-            this.button3.Location = new System.Drawing.Point(9, 149);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(61, 23);
-            this.button3.TabIndex = 13;
-            this.button3.Text = "Cancelar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnCancelar.Location = new System.Drawing.Point(9, 149);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(61, 23);
+            this.btnCancelar.TabIndex = 13;
+            this.btnCancelar.Text = "Fechar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAbrirPasta
             // 
@@ -133,10 +134,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textDestino);
             this.Controls.Add(this.textEntrada);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnOk);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAbrirPasta);
             this.Controls.Add(this.btnAbrirFeature);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMemorial";
             this.Text = "Memorial Descritivo";
             this.ResumeLayout(false);
@@ -151,8 +153,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textDestino;
         private System.Windows.Forms.TextBox textEntrada;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnOk;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAbrirPasta;
         private System.Windows.Forms.Button btnAbrirFeature;
         private System.Windows.Forms.SaveFileDialog dialogDestino;
