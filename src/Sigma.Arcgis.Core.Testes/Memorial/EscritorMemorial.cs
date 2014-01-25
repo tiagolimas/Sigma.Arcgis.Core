@@ -43,9 +43,19 @@ namespace Sigma.Arcgis.Core.Testes.Memorial
         {
             IFeature feature = new FeatureMock();
             IParserAzimuteDistancia parser = new ParserAzimuteDsitancia();
-            var memorial = parser.Ler(new StreamReader(@"c:\2568.txt"));
+            var memorial = parser.Ler(new StreamReader(@"c:\4230.txt"));
             var memorialString = parser.Escrever(memorial);
             Assert.IsNotNullOrEmpty(memorialString);
+        }
+
+        [Test]
+        public void TesteLeituraException()
+        {
+            IFeature feature = new FeatureMock();
+            IParserAzimuteDistancia parser = new ParserAzimuteDsitancia();
+            var memorial = parser.Ler(new StreamReader(@"c:\7963.txt"));
+            var memorialString = parser.Escrever(memorial);
+            Assert.IsNullOrEmpty(memorialString);
         }
 
         [Test]

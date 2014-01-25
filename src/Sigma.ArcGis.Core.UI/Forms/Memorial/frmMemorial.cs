@@ -26,7 +26,6 @@ namespace Sigma.Arcgis.Core.UI.Forms.Memorial
         {
             try
             {
-
                 Dialog _dialog = new Dialog();
                 string resultado = string.Empty;
                 IFeatureClass klass = Dialog.AbrirObjetos(0);
