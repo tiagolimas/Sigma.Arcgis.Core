@@ -24,13 +24,25 @@ namespace Sigma.Arcgis.Core.UI.Forms.Memorial
 
         private void btnAbrirFeature_Click(object sender, EventArgs e)
         {
-            Dialog _dialog = new Dialog();
-            string resultado = string.Empty;
-            IFeatureClass klass = Dialog.AbrirObjetos(0);
-            textEntrada.Text = klass.FeatureDataset.Workspace.PathName;
-            lblFeature.Text = klass.AliasName;
+            try
+            {
 
-            FClasse = klass;
+                Dialog _dialog = new Dialog();
+                string resultado = string.Empty;
+                IFeatureClass klass = Dialog.AbrirObjetos(0);
+                if (klass != null)
+                {
+                    textEntrada.Text = klass.FeatureDataset.Workspace.PathName;
+                    lblFeature.Text = klass.AliasName;
+                    FClasse = klass;
+                }
+
+            }catch(Exception ex)
+            {
+                var erro = string.Format("Não foi possível carregar o arquivo: {0} \r\n", ex);
+                MessageBox.Show(erro);
+            }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -55,11 +67,11 @@ namespace Sigma.Arcgis.Core.UI.Forms.Memorial
 
                     IDictionary<string, IMemorialDescritivo> memoriaisDescritivos;
                     memoriaisDescritivos = ger.GerarMemoriais(FClasse);
-
                     Core.Memorial.EscritorMemorial escritor = new Core.Memorial.EscritorMemorial(parser);
                     escritor.Configurar(textDestino.Text.Trim());
                     escritor.Escrever(memoriaisDescritivos);
                     MessageBox.Show("Memorial Descritivo gerado com sucesso!");
+                    
                 }
             }
             catch(Exception ex)
