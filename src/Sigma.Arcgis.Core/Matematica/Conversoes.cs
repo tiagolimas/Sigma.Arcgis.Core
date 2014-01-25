@@ -5,15 +5,15 @@ using System.Text;
 
 namespace Sigma.Arcgis.Core.Matematica
 {
-    public class Conversoes
+    public static class Conversoes
     {
 
-        public static double CalculaGraus(double rad)
+        public static double CalculaGraus(this double rad)
         {
             return rad * (180 / Math.PI);
         }
 
-        public static double CalculaRadianos(double grau)
+        public static double CalculaRadianos(this double grau)
         {
             return grau * (Math.PI / 180);
         }

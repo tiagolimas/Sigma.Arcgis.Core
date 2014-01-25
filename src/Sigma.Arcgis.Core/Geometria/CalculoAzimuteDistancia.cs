@@ -10,7 +10,7 @@ using Sigma.Arcgis.Core.Matematica;
 
 namespace Sigma.Arcgis.Core.Geometria
 {
-    public class CalculoAzimuteDistancia : Conversoes
+    public class CalculoAzimuteDistancia
     {
         public double CalculaDistanciaEntreDoisPontos(IPoint de, IPoint para)
         {            
@@ -25,9 +25,7 @@ namespace Sigma.Arcgis.Core.Geometria
         {
             IVector3D vector = new Vector3DClass();
             vector.ConstructDifference(para, de);
-            return CalculaGraus(vector.Azimuth);
+            return vector.Azimuth.CalculaGraus();
         }
-
-
     }
 }
